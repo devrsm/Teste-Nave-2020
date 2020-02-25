@@ -6,8 +6,6 @@ const colaboradores = [
     {id: 4, nome: 'gabriel', sobrenome: 'pinheiro',  idade: 21}
 ]
 
+const saudacao = colaboradores.map( colaboradores => `Olá, ${colaboradores.nome.replace(/^./, colaboradores.nome[0].toUpperCase())}`+` ${colaboradores.sobrenome}!`);
 
-colaboradores.forEach(function(nome) {
-    return (`"Olá, "${nome}`)
-})
-console.log(colaboradores)
+console.log(saudacao)
