@@ -7,7 +7,7 @@ const colaboradores = [
     {id: 4, nome: 'gabriel', sobrenome: 'pinheiro',  idade: 21}
 ]
 
-const UsersOldtoNew = colaboradores.sort((a, b) => a.idade < b.idade ? 1 : -1 ) 
-// const UsersIdToNew = colaboradores.sort((a, b) => a.id < b.id ? 1 : -1 ); 
-// console.log(UsersIdToNew)
-console.log(UsersOldtoNew)
+var users = colaboradores.sort(function(a, b) {
+    return b["idade"] - a["idade"] || b["id"] - a["id"];
+});
+console.log(users)
