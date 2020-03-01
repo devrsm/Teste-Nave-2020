@@ -8,6 +8,7 @@ xhr.send(null);
 
 xhr.onreadystatechange = function() {
     if (xhr.readyState === 4) {
-        console.log(JSON.parse(xhr.responseText))
+        var resposta = JSON.parse(xhr.responseText)
+        console.log(`${resposta.logradouro}, 279, ${resposta.localidade}/${resposta.uf}`)
     }
 }
